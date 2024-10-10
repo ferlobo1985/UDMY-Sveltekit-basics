@@ -3,7 +3,10 @@
     export let form;
 </script>
 
-<form method="POST" use:enhance={({formElement, formData, action, cancel, submitter})=>{
+<form 
+    method="POST"
+    action="?/name" 
+    use:enhance={({formElement, formData, action, cancel, submitter})=>{
     console.log(formElement) // DOM ELEMENT
     console.log(formData.get('name')) /// FORMDATA OBJECT
     console.log(action) /// where is going to POST
