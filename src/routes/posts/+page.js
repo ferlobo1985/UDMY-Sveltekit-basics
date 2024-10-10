@@ -1,5 +1,6 @@
 import axios from "axios";
 import { error } from "@sveltejs/kit";
+import { redirect } from "@sveltejs/kit";
 
 export async function load({params}){
     try{
@@ -10,6 +11,7 @@ export async function load({params}){
             posts:data
         }
     } catch(e){
-        error(404,'Dang it !!')
+        redirect(307,'/')
+        // error(404,'Dang it !!')
     }
 }
