@@ -1,15 +1,14 @@
 import axios from 'axios';
 import { error } from '@sveltejs/kit';
 
-export async function load(){
+export async function load({params}){
     try{
         const res = await axios.get('https://jsonplaceholder.typicode.com/users');
         const data = await res.data;
 
         return {
             users:data,
-            car:'Farrari',
-            colors:['red','blue','green']
+            params
         }
     } catch(er){
         error(404,'Dang it !!')
