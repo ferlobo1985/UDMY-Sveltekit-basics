@@ -1,6 +1,12 @@
 <script>
-    import { page } from '$app/stores';
-    console.log('HELLO')
+    export let data;
+    console.log(data)
 </script>
 
-<h1>User by ID: {$page.params.id}</h1>
+<!-- <h1>User by ID: </h1> -->
+
+<ul>
+    {#each data.users as user(user.id) }
+        <li>Name: {user.name}</li>
+    {/each}
+</ul>
