@@ -1,6 +1,7 @@
 <script>
     export let data;
-    console.log(data)
+    import { PUBLIC_API_KEY } from '$env/static/public';
+    console.log(PUBLIC_API_KEY)
 </script>
 <!-- 
 <h1>User by ID: {data.params.id} </h1>
