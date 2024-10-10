@@ -1,13 +1,13 @@
 <script>
-    import { goto, afterNavigate,beforeNavigate } from '$app/navigation'; 
-
-    afterNavigate(()=>{
-        console.log('After navigation')
-    });
-    beforeNavigate(()=>{
-        console.log('Before navigation')
-    })
+    export let form;
+    console.log(form)
 </script>
 
-<h1>This is the contact page</h1>
-<button on:click={()=> goto('/')}>HOME</button>
+
+<form method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">You name</label>
+        <input type="text" class="form-control" name="name" id="formname"/>
+    </div>
+    <button type="submit">Submit</button>
+</form>
