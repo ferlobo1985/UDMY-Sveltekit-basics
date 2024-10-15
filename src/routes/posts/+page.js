@@ -2,7 +2,6 @@ import axios from "axios";
 import { error } from "@sveltejs/kit";
 import { redirect } from "@sveltejs/kit";
 
-export const prerender = true;
 
 export async function load({params}){
     try{
